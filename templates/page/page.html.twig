@@ -7,9 +7,9 @@
 <div class="page">
   {% embed '@frl_bootstrap/navbar/navbar.twig' with {
     placement: 'sticky-top',
-    container: 'fixed',
-    color: 'light',
-    utility_classes: ['bg-light'],
+    container: 'fluid',
+    color: 'dark',
+    utility_classes: ['bg-dark'],
   } %}
 
     {% block branding %}
@@ -60,7 +60,7 @@
         
         {% if page.sidebar_right %}
           <aside class="page__sidebar-right col col-sm-12 col-md-2">
-          {{ page.sidebar_left }}
+          {{ page.sidebar_right }}
           </aside>
         {% endif %}
       </div>

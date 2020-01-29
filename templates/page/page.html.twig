@@ -1,0 +1,79 @@
+{#
+/**
+ * @file
+ * Template for the main page.
+ */
+#}
+<div class="page">
+  {% embed '@frl_bootstrap/navbar/navbar.twig' with {
+    placement: 'sticky-top',
+    container: 'fixed',
+    color: 'light',
+    utility_classes: ['bg-light'],
+  } %}
+
+    {% block branding %}
+      {% if page.navbar_branding %}
+        {{ page.navbar_branding }}
+      {% endif %}
+    {% endblock %}
+
+    {% block left %}
+      {% if page.navbar_left %}
+        <div class="mr-auto">
+          {{ page.navbar_left }}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block right %}
+      {% if page.navbar_right %}
+        {{ page.navbar_right }}
+      {% endif %}
+    {% endblock %}
+  {% endembed %}
+
+  <main class="pt-5 pb-5">
+    
+
+    {% if page.header %}
+      <header class="page__header mb-3">
+        <div class="container">
+          {{ page.header }}
+        </div>
+      </header>
+    {% endif %}
+
+    <div class="container-fluid">
+      <div class="row d-flex">
+        {% if page.sidebar_left %}
+          <aside class="page__sidebar-left col col-sm-12 col-md-2">
+            {{ page.sidebar_left }}
+          </aside>
+        {% endif %}
+
+        {% if page.content %}
+          <div class="page__content col col-sm-12 col-md-auto flex-grow-1">
+            {{ page.content }}
+          </div>
+        {% endif %}
+        
+        {% if page.sidebar_right %}
+          <aside class="page__sidebar-right col col-sm-12 col-md-2">
+          {{ page.sidebar_left }}
+          </aside>
+        {% endif %}
+      </div>
+    </div>
+  </main>
+
+  {% if page.footer %}
+    <footer class="page__footer">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-md-between align-items-md-center">
+          {{ page.footer }}
+        </div>
+      </div>
+    </footer>
+  {% endif %}
+</div>

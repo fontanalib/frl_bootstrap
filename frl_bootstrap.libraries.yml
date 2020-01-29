@@ -1,0 +1,10 @@
+style:
+  version: VERSION
+  css:
+    theme:
+      assets/css/frl_bootstrap.style.css: {}
+  js:
+    assets/js/frl_bootstrap.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

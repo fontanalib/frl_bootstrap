@@ -1,0 +1,5 @@
+# Schema for the configuration files of the FRL Bootstrap theme.
+
+frl_bootstrap.settings:
+  type: theme_settings
+  label: 'FRL Bootstrap settings'

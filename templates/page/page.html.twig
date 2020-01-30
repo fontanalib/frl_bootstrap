@@ -5,7 +5,7 @@
  */
 #}
 <div class="page">
-  {% embed '@frl_bootstrap/navbar/navbar.twig' with {
+  {% embed '@components/navbar/navbar.twig' with {
     placement: 'sticky-top',
     container: 'fluid',
     color: 'dark',
@@ -33,12 +33,12 @@
     {% endblock %}
   {% endembed %}
 
-  <main class="pt-5 pb-5">
+  <main class="pb-5">
     
 
     {% if page.header %}
       <header class="page__header mb-3">
-        <div class="container">
+        <div class="container-fluid p-0">
           {{ page.header }}
         </div>
       </header>
@@ -47,21 +47,21 @@
     <div class="container-fluid">
       <div class="row d-flex">
         {% if page.sidebar_left %}
-          <aside class="page__sidebar-left col col-sm-12 col-md-2">
+          {# <aside class="page__sidebar-left col col-sm-12 col-md-2"> #}
             {{ page.sidebar_left }}
-          </aside>
+          {# </aside> #}
         {% endif %}
 
         {% if page.content %}
-          <div class="page__content col col-sm-12 col-md-auto flex-grow-1">
+          {# <div class="page__content col col-sm-12 col-md"> #}
             {{ page.content }}
-          </div>
+          {# </div> #}
         {% endif %}
         
         {% if page.sidebar_right %}
-          <aside class="page__sidebar-right col col-sm-12 col-md-2">
+          {# <aside class="page__sidebar-right col col-sm-12 col-md-2"> #}
           {{ page.sidebar_right }}
-          </aside>
+          {# </aside> #}
         {% endif %}
       </div>
     </div>

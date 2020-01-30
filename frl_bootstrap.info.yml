@@ -29,9 +29,21 @@ ckeditor_stylesheets:
   - assets/css/frl_bootstrap.style.css
 
 component-libraries:
-  frl_bootstrap:
+  base:
     paths:
-      - ./src/components
+      - src/patterns/base
+  layouts:
+    paths:
+      - src/patterns/layouts
+  components:
+    paths:
+      - src/patterns/components
+  templates:
+    paths:
+      - src/patterns/templates
+  macros:
+    paths:
+      - src/patterns/macros
 
 # Information added by Drupal.org packaging script on 2020-01-26
 version: '8.x-4.7'

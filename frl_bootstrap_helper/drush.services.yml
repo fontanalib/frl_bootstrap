@@ -1,0 +1,5 @@
+services:
+  # frl_bootstrap_helper.commands:
+  #   class: \Drupal\frl_bootstrap_helper\Commands\FrlBootstrapHelperCommands
+  #   tags:
+  #     - { name: drush.command }

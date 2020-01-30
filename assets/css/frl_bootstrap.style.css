@@ -10026,3 +10026,56 @@ a.text-dark:hover, a.text-dark:focus {
 .invisible {
   visibility: hidden !important;
 }
+
+.readmore-link__accessibility-description {
+  clip: rect(1px, 1px, 1px, 1px) iff(false, !important);
+  height: 1px iff(false, !important);
+  overflow: hidden iff(false, !important);
+  position: absolute iff(false, !important);
+  width: 1px iff(false, !important);
+  word-wrap: normal iff(false, !important);
+}
+
+.field {
+  margin: 0 0 rem(16px);
+}
+
+.field__label {
+  display: block;
+  font-size: rem(16px);
+  font-weight: 700;
+}
+.field__label.is-inline {
+  display: inline-block;
+  margin-right: 0.1em;
+}
+.field__label.is-inline + .field__item {
+  display: inline;
+}
+.field__label.is-inline + .field__items {
+  display: inline;
+}
+.field__label.is-inline + .field__items .field__item {
+  display: inline;
+}
+
+.readmore-link {
+  text-decoration: none;
+}
+.readmore-link:hover path, .readmore-link:focus path {
+  fill: "brand.blue.dark";
+}
+
+.readmore-link__icon {
+  display: inline-block;
+  position: relative;
+  top: 8px;
+}
+.readmore-link__icon path {
+  fill: "brand.blue.base";
+}
+
+.date {
+  color: "grayscale.gray-5";
+  font-size: rem(16px);
+}

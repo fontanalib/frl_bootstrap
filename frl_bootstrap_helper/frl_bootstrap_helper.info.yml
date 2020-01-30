@@ -1,0 +1,5 @@
+name: FRL Bootstrap Helper
+description: Provides additional functionality for the FRL Bootstrap theme
+type: module
+core: '8.x'
+package: 'fontanalib'

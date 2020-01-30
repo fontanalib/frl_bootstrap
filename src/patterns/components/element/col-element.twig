@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Template for an Element component.
+ *
+ * Available config:
+ * - html_tag: The HTML tag for the block.
+ * - utility_classes: An array of utility classes.
+ */
+#}
+{% set classes = [
+  'col',
+]|merge(utility_classes ? utility_classes : []) %}
+
+{% if html_tag %}
+  <{{ html_tag }}{{ attributes|without('id').addClass(classes) }}>
+{% endif %}
+{{ content }}
+{% if html_tag %}
+  </{{ html_tag }}>
+{% endif %}

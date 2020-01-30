@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Template for a region.
+ */
+#}
+  {% if (region == 'sidebar_right' or region == 'sidebar_left') and content %}
+    {% include '@components/element/col-element.twig' with {
+    html_tag: 'aside',
+    utility_classes: ['col-xs-12', 'col-md-2', "page__#{region}"],
+    } %}
+  {% elseif region == 'content' and content %}
+  {% include '@components/element/col-element.twig' with {
+    html_tag: 'div',
+    utility_classes: ['page__content'],
+    } %}
+  {% elseif content %}
+    {{ content }}
+{% endif %}
+

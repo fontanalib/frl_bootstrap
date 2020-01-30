@@ -1,0 +1,12 @@
+{#
+/**
+ * @file
+ * Template for an image field.
+ */
+#}
+{% include '@radix/image/image.twig' with {
+  src: attributes.src,
+  alt: attributes.alt,
+  responsive: true,
+  utility_classes: ['float-md-left', 'mr-md-1'],
+} %}

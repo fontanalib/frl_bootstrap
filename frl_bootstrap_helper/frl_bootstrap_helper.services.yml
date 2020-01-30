@@ -1,0 +1,6 @@
+services:
+  frl_bootstrap_helper.frl_bootstrap_extension:
+    arguments: ['@renderer']
+    class: Drupal\frl_bootstrap_helper\TwigExtension\FrlBootstrapExtension
+    tags:
+      - { name: twig.extension }

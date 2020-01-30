@@ -41,6 +41,7 @@
 @import "base/functions";
 @import "base/helpers";
 @import "base/elements";
+@import "base/accessibility";
 
 // Layout
 // -----------------------------------------------------------------------------
@@ -50,7 +51,11 @@
 
 // Component
 // -----------------------------------------------------------------------------
-@import "../components/node/node";
+@import "../patterns/components/node/node";
+@import "../patterns/components/field/field";
+@import "../patterns/components/readmore-link/readmore-link";
+@import "../patterns/components/date/date";
+@import "../patterns/components/page-title/page-title";
 
 // Other
 // -----------------------------------------------------------------------------
